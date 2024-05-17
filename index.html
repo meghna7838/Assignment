@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const student = [
+        {
+            name:"S1",
+            age: 20,
+            marks:50
+        },
+        {
+            name:"S2",
+            age: 10,
+            marks:80
+        },
+        {
+            name:"S3",
+            age: 21,
+            marks:90
+        }]
+
+        function App(){
+            return (
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>cd 
+                        <th>Marks</th>
+                    </tr>
+                    {student.map((stud)=>
+                    <tr>
+                        <td>{stud.name}</td>
+                        <td>{stud.age}</td>
+                        <td>{stud.marks}</td>
+                    </tr>
+                    )
+                }
+                </table>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+    </script>
+</body>
+</html>
